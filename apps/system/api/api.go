@@ -7,6 +7,7 @@ import (
 	"log"
 	"pandax/apps/system/entity"
 	"pandax/apps/system/services"
+	"pandax/pkg/global"
 	"strconv"
 )
 
@@ -121,5 +122,6 @@ func (s *SystemApiApi) GetAllApis(rc *ginx.ReqCtx) {
 func (s *SystemApiApi) GetPolicyPathByRoleId(rc *ginx.ReqCtx) {
 	roleKey := rc.GinCtx.Query("roleKey")
 	tenantId := strconv.Itoa(int(rc.LoginAccount.TenantId))
-	rc.ResData = casbin.GetPolicyPathByRoleId(tenantId, roleKey)
+	ca := casbin.CasbinS{ModelPath: global.Conf.Casbin.ModelPath}
+	rc.ResData = ca.GetPolicyPathByRoleId(tenantId, roleKey)
 }

@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/kakuilan/kgo"
 	"net/http"
+	"pandax/pkg/middleware"
 	"runtime"
 )
 
@@ -72,7 +73,7 @@ func (s *System) ConnectWs(g *gin.Context) {
 	}
 	// 权限校验
 	rc := ginx.NewReqCtx(g)
-	if err = ginx.PermissionHandler(rc); err != nil {
+	if err = middleware.PermissionHandler(rc); err != nil {
 		panic(any(biz.NewBizErr("没有权限")))
 	}
 
