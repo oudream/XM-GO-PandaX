@@ -41,6 +41,7 @@ var rootCmd = &cobra.Command{
 			jobs.InitJob()
 			jobs.Setup()
 		}()
+
 		starter.RunWebServer(initialize.InitRouter())
 	},
 }
