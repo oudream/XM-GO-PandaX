@@ -3,6 +3,7 @@ module pandax
 go 1.18
 
 require (
+	github.com/XM-GO/PandaKit v0.0.0-20230527040642-b5fb5258717c
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/didip/tollbooth v4.0.2+incompatible
 	github.com/emicklei/go-restful-openapi/v2 v2.9.0
@@ -16,13 +17,12 @@ require (
 	github.com/spf13/cobra v1.5.0
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa
 	google.golang.org/grpc v1.48.0
-	gorm.io/gorm v1.22.3
+	gorm.io/gorm v1.23.8
 )
 
 require (
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible // indirect
 	github.com/StackExchange/wmi v0.0.0-20210224194228-fe8f1750fd46 // indirect
-	github.com/XM-GO/PandaKit v0.0.0-20230527040642-b5fb5258717c // indirect
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.0+incompatible // indirect
 	github.com/brianvoe/gofakeit/v6 v6.0.2 // indirect
 	github.com/casbin/casbin/v2 v2.37.4 // indirect
@@ -49,7 +49,7 @@ require (
 	github.com/jackc/pgtype v1.9.0 // indirect
 	github.com/jackc/pgx/v4 v4.14.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
-	github.com/jinzhu/now v1.1.2 // indirect
+	github.com/jinzhu/now v1.1.4 // indirect
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
